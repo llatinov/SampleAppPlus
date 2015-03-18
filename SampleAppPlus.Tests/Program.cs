@@ -6,10 +6,13 @@ namespace SampleAppPlus.Tests
     {
         static void Main(string[] args)
         {
-            NTestsRunner runner = new NTestsRunner();
-            runner.TestResultsDir = @"C:\temp";
-            runner.MaxTestCaseRuntimeMinutes = 2;
-            runner.TestsToExecute.Add("AddEditTextTests");
+            NTestsRunnerSettings settings = new NTestsRunnerSettings();
+            settings.TestResultsDir = @"C:\temp";
+            settings.MaxTestCaseRuntimeMinutes = 2;
+            settings.TestsToExecute.Add("AddEditTextTests");
+            settings.PreventScreenLock = true;
+
+            NTestsRunner runner = new NTestsRunner(settings);
             runner.Execute();
         }
     }
