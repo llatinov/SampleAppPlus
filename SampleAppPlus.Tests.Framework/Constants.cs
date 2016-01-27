@@ -1,10 +1,18 @@
 ﻿using System;
+using System.IO;
 
 namespace SampleAppPlus.Tests.Framework
 {
     public class Constants
     {
-        public const string FilePath = @"C:\SampleAppPlus\SampleAppPlus\bin\Debug\HappyFace.jpg";
+        public static string CurrentPath
+        {
+            get { return Directory.GetCurrentDirectory() + Path.DirectorySeparatorChar; }
+        }
+        public static string FilePath
+        {
+            get { return CurrentPath + "HappyFace.jpg"; }
+        }
     }
 
     public enum Messages

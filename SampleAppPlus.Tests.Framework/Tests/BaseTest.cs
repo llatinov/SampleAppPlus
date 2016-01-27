@@ -8,7 +8,7 @@ namespace SampleAppPlus.Tests.Framework
     public class BaseTest
     {
         protected App App { get; set; }
-        private string applicationPath = "C:\\SampleAppPlus\\SampleAppPlus\\bin\\Debug\\SampleAppPlus.exe";
+        private string applicationPath = Constants.CurrentPath + "SampleAppPlus.exe";
 
         protected void Start()
         {
